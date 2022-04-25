@@ -11,9 +11,9 @@ const questions = [
 
     //collect input team managers name
     {
-        type: 'input'
-        name: 'mangersName'
-        message: 'What is the team manager's name?'
+        type: 'input',
+        name: 'mangersName',
+        message: 'What is the team manager's name?',
         validate: managersNameInput => {
             if (managersNameInput) {
                 return true;
@@ -26,9 +26,9 @@ const questions = [
     
     //collect input managers employee ID
     {
-        type: 'input'
-        name: 'managersId'
-        message: 'What is the team manager's employee ID?'
+        type: 'input',
+        name: 'managersId',
+        message: 'What is the team manager's employee ID?',
         validate: managersIdInput => {
             if (managersIdInput) {
                 return true;
@@ -41,9 +41,9 @@ const questions = [
 
     //collect input managers email address
     {
-        type: 'input'
-        name: 'managersEmail'
-        message: 'What is the team manager's e-mail address?'
+        type: 'input',
+        name: 'managersEmail',
+        message: 'What is the team manager's e-mail address?',
         validate: managersEmailInput=> {
             if (managersEmailInput) {
                 return true;
@@ -56,9 +56,9 @@ const questions = [
 
     //collect input managers office number
     {
-        type: 'input'
-        name: 'managersOfficeNumber'
-        message: 'What is the team manager's office number?'
+        type: 'input',
+        name: 'managersOfficeNumber',
+        message: 'What is the team manager's office number?',
         validate: managersOfficeNumberInput => {
             if (managersOfficeNumberInput) {
                 return true;
@@ -71,12 +71,64 @@ const questions = [
 
 
     //collect input engineer name
+    {
+        type: 'input',
+        name: 'engineerName',
+        message: 'What is the engineer's name?',
+        validate: engineerNameInput=> {
+            if (engineerNameInput) {
+                return true;
+            } else {
+                console.log('Please provide the engineer's name to continue.');
+                return false;
+            }
+        }
+    },
 
     //collect input engineer id
+    {
+        type: 'input',
+        name: 'engineerEmployeeId',
+        message: 'What is the engineer's employee ID?',
+        validate: engineerEmployeeIdInput=> {
+            if (engineerEmployeeIdInput) {
+                return true;
+            } else {
+                console.log('Please provide the engineer's employee ID to continue.');
+                return false;
+            }
+        }
+    },
 
     //collect input engineer email
+    {
+        type: 'input',
+        name: 'engineerEmail',
+        message: 'What is the engineer's e-mail address?',
+        validate: engineerEmailInput=> {
+            if (engineerEmailInput) {
+                return true;
+            } else {
+                console.log('Please provide the engineer's E-mail address to continue.');
+                return false;
+            }
+        }
+    },
 
-    //collect input github username
+    //collect input engineer's github username
+    {
+        type: 'input',
+        name: 'engineerGitHub',
+        message: 'What is the engineer's GitHub username?',
+        validate: engineerGitHUbInput=> {
+            if (engineerGitHubInput) {
+                return true;
+            } else {
+                console.log('Please provide the engineer's GitHub username to continue.');
+                return false;
+            }
+        }
+    },
 
 
     //collect input intern name
