@@ -8,7 +8,7 @@ const generateHTML = require ('./Develop/Assets/js/generateHTML');
 
 //array for questions
 const questions = [
-
+//MANAGER QUESTIONS
     //collect input team managers name
     {
         type: 'input',
@@ -70,6 +70,7 @@ const questions = [
     },
 
 
+//ENGINEER QUESTIONS
     //collect input engineer name
     {
         type: 'input',
@@ -130,14 +131,66 @@ const questions = [
         }
     },
 
-
+//INTERN QUESTIONS
     //collect input intern name
+    {
+        type: 'input',
+        name: 'internName',
+        message: 'What is the intern's name?',
+        validate: internNameInput=> {
+            if (internNameInput) {
+                return true;
+            } else {
+                console.log('Please provide the intern's name to continue.');
+                return false;
+            }
+        }
+    },
 
     //collect input intern id
+    {
+        type: 'input',
+        name: 'internEmployeeId',
+        message: 'What is the intern's employee ID?',
+        validate: internEmployeeIdInput=> {
+            if (internEmployeeIdInput) {
+                return true;
+            } else {
+                console.log('Please provide the intern's employee ID to continue.');
+                return false;
+            }
+        }
+    },
 
     //collect input intern email
+    {
+        type: 'input',
+        name: 'internEmail',
+        message: 'What is the intern's E-mail address?',
+        validate: internEmailInput=> {
+            if (internEmailInput) {
+                return true;
+            } else {
+                console.log('Please provide the intern's E-mail address to continue.');
+                return false;
+            }
+        }
+    },
 
     //collet input intern school
+    {
+        type: 'input',
+        name: 'internSchool',
+        message: 'What is the intern's school?',
+        validate: internSchoolInput=> {
+            if (internSchoolInput) {
+                return true;
+            } else {
+                console.log('Please provide the intern's school to continue.');
+                return false;
+            }
+        }
+    },
 
 
      //list option engineer/intern/finish
