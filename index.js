@@ -194,10 +194,33 @@ const questions = [
 
 
      //list option engineer/intern/finish
+     {
+        type: 'list',
+        name: 'menuOptions',
+        message: 'Add another profile',
+        choices: ['Team Manager', 'Engineer', 'Intern', 'I'm finished building my team',]
+    },
 
+];
 
+//Prompts user
+const promptUser = async() => {
+    return await inquirer.prompt(questions);
+};
 
+//Function to write an html file
+function writeToFile(fileName, data) {
+    fs.promises.writeFile(fileName, data)
+}
 
+//Function to initialize the app
+async function init() {
+    //wait till the promise from prompt usr is resolved, store in var answers
+    var answers = away promptUser();
+    var html = generateHTML(answers);
+    //UNSURE ABOUT THIS WRITE TO FILE
+    writeToFile('generated-html/Team Profile Generator', html)
+}
 
-
-]
+//Function call to initalize the app
+init();
