@@ -119,12 +119,3 @@ const generateTeam = (team) => {
       `;
   };
     
-
-
-
-
-
-
-
-
-}

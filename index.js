@@ -121,7 +121,7 @@ const questions = [
         type: 'input',
         name: 'engineerGitHub',
         message: 'What is the engineer\'s GitHub username?',
-        validate: engineerGitHUbInput=> {
+        validate: engineerGitHubInput=> {
             if (engineerGitHubInput) {
                 return true;
             } else {
