@@ -13,12 +13,12 @@ const questions = [
     {
         type: 'input',
         name: 'mangersName',
-        message: 'What is the team manager's name?',
+        message: 'What is the team manager\'s name?',
         validate: managersNameInput => {
             if (managersNameInput) {
                 return true;
             } else {
-                console.log('Please provide the team manager's name to continue.');
+                console.log('Please provide the team manager\'s name to continue.');
                 return false;
             }
         }
@@ -28,12 +28,12 @@ const questions = [
     {
         type: 'input',
         name: 'managersId',
-        message: 'What is the team manager's employee ID?',
+        message: 'What is the team manager\'s employee ID?',
         validate: managersIdInput => {
             if (managersIdInput) {
                 return true;
             } else {
-                console.log('Please provide the team manager's employee ID to continue.');
+                console.log('Please provide the team manager\'s employee ID to continue.');
                 return false;
             }
         }
@@ -43,12 +43,12 @@ const questions = [
     {
         type: 'input',
         name: 'managersEmail',
-        message: 'What is the team manager's e-mail address?',
+        message: 'What is the team manager\'s e-mail address?',
         validate: managersEmailInput=> {
             if (managersEmailInput) {
                 return true;
             } else {
-                console.log('Please provide the team manager's e-mail address to continue.');
+                console.log('Please provide the team manager\'s e-mail address to continue.');
                 return false;
             }
         }
@@ -58,12 +58,12 @@ const questions = [
     {
         type: 'input',
         name: 'managersOfficeNumber',
-        message: 'What is the team manager's office number?',
+        message: 'What is the team manager\'s office number?',
         validate: managersOfficeNumberInput => {
             if (managersOfficeNumberInput) {
                 return true;
             } else {
-                console.log('Please provide the team manager's office number to continue.');
+                console.log('Please provide the team manager\'s office number to continue.');
                 return false;
             }
         }
@@ -75,12 +75,12 @@ const questions = [
     {
         type: 'input',
         name: 'engineerName',
-        message: 'What is the engineer's name?',
+        message: 'What is the engineer\'s name?',
         validate: engineerNameInput=> {
             if (engineerNameInput) {
                 return true;
             } else {
-                console.log('Please provide the engineer's name to continue.');
+                console.log('Please provide the engineer\'s name to continue.');
                 return false;
             }
         }
@@ -90,12 +90,12 @@ const questions = [
     {
         type: 'input',
         name: 'engineerEmployeeId',
-        message: 'What is the engineer's employee ID?',
+        message: 'What is the engineer\'s employee ID?',
         validate: engineerEmployeeIdInput=> {
             if (engineerEmployeeIdInput) {
                 return true;
             } else {
-                console.log('Please provide the engineer's employee ID to continue.');
+                console.log('Please provide the engineer\'s employee ID to continue.');
                 return false;
             }
         }
@@ -105,12 +105,12 @@ const questions = [
     {
         type: 'input',
         name: 'engineerEmail',
-        message: 'What is the engineer's e-mail address?',
+        message: 'What is the engineer\'s e-mail address?',
         validate: engineerEmailInput=> {
             if (engineerEmailInput) {
                 return true;
             } else {
-                console.log('Please provide the engineer's E-mail address to continue.');
+                console.log('Please provide the engineer\'s E-mail address to continue.');
                 return false;
             }
         }
@@ -120,12 +120,12 @@ const questions = [
     {
         type: 'input',
         name: 'engineerGitHub',
-        message: 'What is the engineer's GitHub username?',
+        message: 'What is the engineer\'s GitHub username?',
         validate: engineerGitHUbInput=> {
             if (engineerGitHubInput) {
                 return true;
             } else {
-                console.log('Please provide the engineer's GitHub username to continue.');
+                console.log('Please provide the engineer\'s GitHub username to continue.');
                 return false;
             }
         }
@@ -136,12 +136,12 @@ const questions = [
     {
         type: 'input',
         name: 'internName',
-        message: 'What is the intern's name?',
+        message: 'What is the intern\'s name?',
         validate: internNameInput=> {
             if (internNameInput) {
                 return true;
             } else {
-                console.log('Please provide the intern's name to continue.');
+                console.log('Please provide the intern\'s name to continue.');
                 return false;
             }
         }
@@ -151,12 +151,12 @@ const questions = [
     {
         type: 'input',
         name: 'internEmployeeId',
-        message: 'What is the intern's employee ID?',
+        message: 'What is the intern\'s employee ID?',
         validate: internEmployeeIdInput=> {
             if (internEmployeeIdInput) {
                 return true;
             } else {
-                console.log('Please provide the intern's employee ID to continue.');
+                console.log('Please provide the intern\'s employee ID to continue.');
                 return false;
             }
         }
@@ -166,12 +166,12 @@ const questions = [
     {
         type: 'input',
         name: 'internEmail',
-        message: 'What is the intern's E-mail address?',
+        message: 'What is the intern\'s E-mail address?',
         validate: internEmailInput=> {
             if (internEmailInput) {
                 return true;
             } else {
-                console.log('Please provide the intern's E-mail address to continue.');
+                console.log('Please provide the intern\'s E-mail address to continue.');
                 return false;
             }
         }
@@ -181,12 +181,12 @@ const questions = [
     {
         type: 'input',
         name: 'internSchool',
-        message: 'What is the intern's school?',
+        message: 'What is the intern\'s school?',
         validate: internSchoolInput=> {
             if (internSchoolInput) {
                 return true;
             } else {
-                console.log('Please provide the intern's school to continue.');
+                console.log('Please provide the intern\'s school to continue.');
                 return false;
             }
         }
@@ -198,7 +198,7 @@ const questions = [
         type: 'list',
         name: 'menuOptions',
         message: 'Add another profile',
-        choices: ['Team Manager', 'Engineer', 'Intern', 'I'm finished building my team',]
+        choices: ['Team Manager', 'Engineer', 'Intern', 'I\'m finished building my team',]
     },
 
 ];
@@ -210,13 +210,14 @@ const promptUser = async() => {
 
 //Function to write an html file
 function writeToFile(fileName, data) {
+    //returns a promise
     fs.promises.writeFile(fileName, data)
 }
 
 //Function to initialize the app
 async function init() {
     //wait till the promise from prompt usr is resolved, store in var answers
-    var answers = away promptUser();
+    var answers = await promptUser();
     var html = generateHTML(answers);
     //UNSURE ABOUT THIS WRITE TO FILE
     writeToFile('generated-html/Team Profile Generator', html)
