@@ -15,5 +15,5 @@ test('test get email using getEmail()', () => {
 
 //TODO
 test('test get role using getRole()', () => {
-
+    expect(Employee.getRole()).toBe('Employee')
 })
