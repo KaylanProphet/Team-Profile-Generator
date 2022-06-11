@@ -16,3 +16,8 @@ test('test get email using getEmail()', () => {
 test('test get github using getGithub()', () => {
     expect(newEngineer.getGithub()).toBe('CoolGitName')
 })
+
+//TODO
+test('test get role using getRole()', () => {
+
+})
