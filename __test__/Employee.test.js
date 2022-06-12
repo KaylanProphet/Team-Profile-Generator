@@ -8,10 +8,6 @@ test('test get name using getName()', () => {
     expect(newEmployee.getName()).toBe(employeeName)
 })
 
-test('test get name using .name', () => {
-    expect(newEmployee.name).toBe()
-})
-
 test('test get id using getId()', () => {
     expect(newEmployee.getId()).toBe(23)
 })

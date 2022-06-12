@@ -17,7 +17,6 @@ test('test get github using getGithub()', () => {
     expect(newEngineer.getGithub()).toBe('CoolGitName')
 })
 
-//TODO
 test('test get role using getRole()', () => {
     expect(newEngineer.getRole()).toBe('Engineer')
 
