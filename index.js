@@ -125,6 +125,65 @@ const engineerQuestions = [
     },
 ]
 
+//Prompts for intern input
+const internQuestions = [
+    {
+        type: 'input',
+        name: 'name',
+        message: "Interns's Name:",
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please enter a name for the team intern');
+                return false;
+            }
+        }
+    },
+
+    {
+        type: 'input',
+        name: 'id',
+        message: "Intern's ID:",
+        validate: idInput => {
+            if (idInput) {
+                return true;
+            } else {
+                console.log('Please enter a ID for the team intern');
+                return false;
+            }
+        }
+    },
+
+    {
+        type: 'input',
+        name: 'email',
+        message: "Intern's email:",
+        validate: emailInput => {
+            if (emailInput) {
+                return true;
+            } else {
+                console.log('Please enter an email for the team intern');
+                return false;
+            }
+        }
+    },
+
+    {
+        type: 'input',
+        name: 'school',
+        message: "Intern's school:",
+        validate: schoolInput => {
+            if (schoolInput) {
+                return true;
+            } else {
+                console.log('Please enter the school for the team intern');
+                return false;
+            }
+        }
+    },
+]
+
 
 const addEmployeeQuestions = [
     {
