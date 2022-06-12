@@ -1,5 +1,5 @@
 const Manager = require('../lib/Manager');
-let newManager = new Manager('Bishop', 5, 'bishoplee@aol.com', 126);
+const newManager = new Manager('Bishop', 5, 'bishoplee@aol.com', 126);
 
 test('test get name using getName()', () => {
     expect(newManager.getName()).toBe('Bishop')
@@ -17,7 +17,6 @@ test('test get officeNumber using getOfficeNumber()', () => {
     expect(newManager.getOfficeNumber()).toBe(126)
 })
 
-//TODO
 test('test get role using getRole()', () => {
-
+    expect(newManager.getRole()).toBe('Manager')
 })

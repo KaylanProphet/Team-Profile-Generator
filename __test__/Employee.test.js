@@ -1,8 +1,15 @@
 const Employee = require('../lib/Employee');
-let newEmployee = new Employee('joe', 23, 'joe@gmail.com');
+const employeeName = 'joe'
+//new object instance or version of it
+let newEmployee = new Employee(employeeName, 23, 'joe@gmail.com');
+
 
 test('test get name using getName()', () => {
-    expect(newEmployee.getName()).toBe('joe')
+    expect(newEmployee.getName()).toBe(employeeName)
+})
+
+test('test get name using .name', () => {
+    expect(newEmployee.name).toBe()
 })
 
 test('test get id using getId()', () => {
@@ -13,7 +20,6 @@ test('test get email using getEmail()', () => {
     expect(newEmployee.getEmail()).toBe('joe@gmail.com')
 })
 
-//TODO
 test('test get role using getRole()', () => {
-    expect(Employee.getRole()).toBe('Employee')
+    expect(newEmployee.getRole()).toBe('Employee')
 })
