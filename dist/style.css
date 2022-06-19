@@ -1,0 +1,41 @@
+body {
+    background-color: white;
+}
+
+
+/*Header Details*/
+
+header {
+    background-color: red;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+
+
+}
+
+
+/*Card Details*/
+.employee-cards {
+    display: flex;
+    /*flex-direction: row;*/
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: aliceblue;
+    height: 20%;
+    width: 10%;
+
+}
+
+.name-tag {
+    background-color: blue;
+    color: white;
+}

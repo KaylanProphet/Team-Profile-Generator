@@ -3,9 +3,13 @@ const inquirer = require('inquirer');
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-
+const render = require('./src/generateHTML')
 //list of employees
-const employees = []
+const employees = {
+    managers: [],
+    engineers: [],
+    interns: []
+}
 
 //Prompts for manager input
 const mangerQuestions = [
@@ -188,8 +192,8 @@ const internQuestions = [
 const addEmployeeQuestions = [
     {
         type: 'list',
-        name: 'choices',
-        message: 'Would you like to add another employee',
+        name: 'choice',
+        message: 'Would you like to add another employee?',
         choices: ['Engineer', 'Intern', 'Complete Profile'],
     },
 ]
@@ -199,19 +203,53 @@ const addEmployeeQuestions = [
 async function managerPrompts() {
     //construction a new object using inquirer
     const manager = await inquirer.prompt(mangerQuestions)
-    const newManager = new Manager(manager.name, manager.id)
+    const newManager = new Manager(manager.name, manager.id, manager.email, manager.officeNumber)
     //takes newManager and pushes it to employees array
-    employees.push(newManager)
-
+    employees.managers.push(newManager)
+    addEmployee()
 }
+
+async function engineerPrompts() {
+    const engineer = await inquirer.prompt(engineerQuestions)
+    const newEngineer = new Engineer(engineer.name, engineer.id, engineer.email, engineer.github)
+    employees.engineers.push(newEngineer)
+    addEmployee()
+}
+
+async function internPrompts() {
+    const intern = await inquirer.prompt(internQuestions)
+    const newIntern = new Intern(intern.name, intern.id, intern.email, intern.school)
+    employees.interns.push(newIntern)
+    addEmployee()
+}
+
 
 async function addEmployee() {
     const choices = await inquirer.prompt(addEmployeeQuestions)
     //.choices is a place holder for the time being
     //add employee prompt
-    switch (choices.choices) {
+    switch (choices.choice) {
         //switch is looking for a matching string in choices
         case 'Engineer':
-
+            await engineerPrompts()
+            break;
+        case 'Intern':
+            await internPrompts()
+            break;
+        case 'Complete Profile':
+            console.log(employees);
+            const htmlString = render(employees);
+            console.log(htmlString)
+            // write html string to file
+            fs.writeFileSync('./dist/MyTeam.html', htmlString,)
+            break
     }
 }
+
+
+
+managerPrompts()
+
+
+
+
