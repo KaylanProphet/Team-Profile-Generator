@@ -26,16 +26,22 @@ h1 {
     /*flex-direction: row;*/
     justify-content: space-evenly;
     flex-wrap: wrap;
+    margin: 2%
 }
 
 .card {
     background-color: aliceblue;
-    height: 20%;
-    width: 10%;
-
+    height: 30%;
+    width: 15%;
 }
 
-.name-tag {
+.name-tag h2 {
     background-color: blue;
     color: white;
+    margin: 0%;
+    padding: 5%;
+}
+
+p {
+    padding-left: 5%;
 }

@@ -51,7 +51,7 @@ module.exports = employees => `
     <div>
     <p>ID:${intern.id}</p>
     <p>Email:${intern.email}</p>
-    <p>Intern:${intern.school}</p>
+    <p>School:${intern.school}</p>
     </div>
     </div>
     `)}
