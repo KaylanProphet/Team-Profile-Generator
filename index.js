@@ -246,3 +246,4 @@ async function addEmployee() {
     }
 }
 
+managerPrompts()
