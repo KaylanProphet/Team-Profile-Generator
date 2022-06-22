@@ -241,7 +241,7 @@ async function addEmployee() {
             const htmlString = render(employees);
             console.log(htmlString)
             // write html string to file
-            fs.writeFileSync('./dist/MyTeam.html', htmlString,)
+            fs.writeFileSync('./dist/MyTeam.html', htmlString)
             break
     }
 }

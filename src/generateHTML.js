@@ -40,7 +40,7 @@ module.exports = employees => `
     <p>GitHub:${engineer.github}</p>
     </div>
     </div>
-    `)}
+    `).join('')}
 
     ${employees.interns.map(intern => `
     <div class = "card">
@@ -54,7 +54,7 @@ module.exports = employees => `
     <p>School:${intern.school}</p>
     </div>
     </div>
-    `)}
+    `).join('')}
 </div>
 </body>
 </html>
