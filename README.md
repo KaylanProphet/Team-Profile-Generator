@@ -13,10 +13,7 @@ This application must be obtained through the Team Profile Generator [repository
 
 ## Demo
 
-<mark>==Walk through video will go here==</mark>
-
-* insert walkthrough, and screenshots of application
-* Sample html
+[Watch demonstration here](https://drive.google.com/file/d/1BCLyq9HWoMap5LSHwxnNcRkvMPIqGE--/view)
 
 ## Repository
 
